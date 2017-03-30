@@ -21,10 +21,11 @@
 
     <string name="question_3">Question 3:</string>
     <string name="question_3_body">When was Roger Federer born?</string>
-    <string name="date_1">07/08/1982</string>
-    <string name="date_2">08/08/1981</string>
-    <string name="date_3">18/09/1981</string>
-    <string name="date_4">08/09/1980</string>
+    <string name="date_1">7 August of 1982</string>
+    <string name="date_2">8 September of 1980</string>
+    <string name="date_3">8 August of 1981</string>
+    <string name="date_4">18 September of 1981</string>
+
 
     <string name="question_4">Question 4:</string>
     <string name="question_4_body">What age did Roger Federer start tennis?</string>
