@@ -1,3 +1,69 @@
 <resources>
+    <!-- Title for the application. [CHAR LIMIT=20] -->
     <string name="app_name">Roger Federer Quiz</string>
+
+    <!-- XML strings declaration -->
+    <string name="name_edit_text">Your name</string>
+
+    <string name="question_1">Question 1:</string>
+    <string name="question_1_body">How many grand slams has Roger Federer won?</string>
+    <string name="total_gs_1">17 GS</string>
+    <string name="total_gs_2">19 GS</string>
+    <string name="total_gs_3">18 GS</string>
+    <string name="total_gs_4">16 GS</string>
+
+    <string name="question_2">Question 2:</string>
+    <string name="question_2_body">Which languages does Roger Federer speak?</string>
+    <string name="english_language">English</string>
+    <string name="german_language">German</string>
+    <string name="french_language">French</string>
+    <string name="spanish_language">Spanish</string>
+
+    <string name="question_3">Question 3:</string>
+    <string name="question_3_body">When was Roger Federer born?</string>
+    <string name="date_1">07/08/1982</string>
+    <string name="date_2">08/08/1981</string>
+    <string name="date_3">18/09/1981</string>
+    <string name="date_4">08/09/1980</string>
+
+    <string name="question_4">Question 4:</string>
+    <string name="question_4_body">What age did Roger Federer start tennis?</string>
+    <string name="age_1">6 years old</string>
+    <string name="age_2">9 years old</string>
+    <string name="age_3">5 years old</string>
+    <string name="age_4">8 years old</string>
+
+    <string name="question_5">Question 5:</string>
+    <string name="question_5_body">Who were Roger Federer idols?</string>
+    <string name="idol_1">Stefan Edberg</string>
+    <string name="idol_2">Ivan Lendl</string>
+    <string name="idol_3">Boris Becker</string>
+    <string name="idol_4">Pete Sampras</string>
+
+    <string name="question_6">Question 6:</string>
+    <string name="question_6_body">How many weeks was Roger Federer NO. 1 in the ATP rankings?</string>
+    <string name="week_number_1">302 weeks</string>
+    <string name="week_number_2">308 weeks</string>
+    <string name="week_number_3">237 weeks</string>
+    <string name="week_number_4">239 weeks</string>
+
+    <string name="question_7">Question 7:</string>
+    <string name="question_7_body">How many ATP World Tour Finals has Roger Federer won?</string>
+    <string name="total_atp_finals_title_1">5 titles</string>
+    <string name="total_atp_finals_title_2">7 titles</string>
+    <string name="total_atp_finals_title_3">4 titles</string>
+    <string name="total_atp_finals_title_4">6 titles</string>
+
+    <string name="question_8">Question 8:</string>
+    <string name="question_8_body">Who was Roger Federer\'s doubles partner in Olympics 2012?\n(Only last name)</string>
+    <string name="answer_edit_text">Your answer</string>
+
+    <string name="question_9">Question 9:</string>
+    <string name="question_9_body">Who was the Roger Federer\'s opponent in the final of Wimbledon 2008?\n(Only last name)</string>
+
+
+    <string name="question_10">Question 10:</string>
+    <string name="question_10_body">What is Roger Federer\'s nationality?</string>
+
+    <string name="submit_button">Submit</string>
 </resources>
