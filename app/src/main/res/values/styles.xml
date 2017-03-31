@@ -9,6 +9,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!-- Theme UI controls like checkboxes and text fields -->
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
     </style>
 
     <style name="edit_text">

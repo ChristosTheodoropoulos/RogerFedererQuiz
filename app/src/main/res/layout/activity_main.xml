@@ -18,13 +18,14 @@
         android:paddingTop="16dp">
 
         <EditText
+            android:id="@+id/name_edit_text"
             style="@style/edit_text"
             android:hint="@string/name_edit_text" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/rogerfederer_6_"
+            android:src="@drawable/rogerfederer_6"
             android:scaleType="centerCrop"/>
 
         <TextView
@@ -42,18 +43,22 @@
             android:layout_marginLeft="20dp">
 
             <RadioButton
+                android:id="@+id/question_1_radio_button_1"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_gs_1" />
 
             <RadioButton
+                android:id="@+id/question_1_radio_button_2"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_gs_2" />
 
             <RadioButton
+                android:id="@+id/question_1_radio_button_3"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_gs_3" />
 
             <RadioButton
+                android:id="@+id/question_1_radio_button_4"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_gs_4" />
         </RadioGroup>
@@ -78,10 +83,12 @@
                 android:layout_marginLeft="20dp">
 
                 <CheckBox
+                    android:id="@+id/question_2_check_box_1"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/english_language"/>
 
                 <CheckBox
+                    android:id="@+id/question_2_check_box_2"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/spanish_language"/>
 
@@ -94,10 +101,12 @@
                 android:layout_marginLeft="28dp">
 
                 <CheckBox
+                    android:id="@+id/question_2_check_box_3"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/french_language"/>
 
                 <CheckBox
+                    android:id="@+id/question_2_check_box_4"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/german_language"/>
 
@@ -120,18 +129,22 @@
             android:layout_marginLeft="20dp">
 
             <RadioButton
+                android:id="@+id/question_3_radio_button_1"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/date_1" />
 
             <RadioButton
+                android:id="@+id/question_3_radio_button_2"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/date_2" />
 
             <RadioButton
+                android:id="@+id/question_3_radio_button_3"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/date_3" />
 
             <RadioButton
+                android:id="@+id/question_3_radio_button_4"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/date_4" />
 
@@ -152,18 +165,22 @@
             android:layout_marginLeft="20dp">
 
             <RadioButton
+                android:id="@+id/question_4_radio_button_1"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/age_1" />
 
             <RadioButton
+                android:id="@+id/question_4_radio_button_2"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/age_2" />
 
             <RadioButton
+                android:id="@+id/question_4_radio_button_3"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/age_3" />
 
             <RadioButton
+                android:id="@+id/question_4_radio_button_4"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/age_4" />
 
@@ -185,14 +202,15 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="12dp">
+                android:orientation="vertical">
 
                 <CheckBox
+                    android:id="@+id/question_5_check_box_1"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/idol_1"/>
 
                 <CheckBox
+                    android:id="@+id/question_5_check_box_2"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/idol_2"/>
 
@@ -205,10 +223,12 @@
                 android:layout_marginLeft="8dp">
 
                 <CheckBox
+                    android:id="@+id/question_5_check_box_3"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/idol_3"/>
 
                 <CheckBox
+                    android:id="@+id/question_5_check_box_4"
                     style="@style/radio_checkbox_buttons"
                     android:text="@string/idol_4"/>
 
@@ -231,18 +251,22 @@
             android:layout_marginLeft="20dp">
 
             <RadioButton
+                android:id="@+id/question_6_radio_button_1"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/week_number_1" />
 
             <RadioButton
+                android:id="@+id/question_6_radio_button_2"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/week_number_2" />
 
             <RadioButton
+                android:id="@+id/question_6_radio_button_3"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/week_number_3" />
 
             <RadioButton
+                android:id="@+id/question_6_radio_button_4"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/week_number_4" />
 
@@ -263,18 +287,22 @@
             android:layout_marginLeft="20dp">
 
             <RadioButton
+                android:id="@+id/question_7_radio_button_1"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_atp_finals_title_1" />
 
             <RadioButton
+                android:id="@+id/question_7_radio_button_2"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_atp_finals_title_2" />
 
             <RadioButton
+                android:id="@+id/question_7_radio_button_3"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_atp_finals_title_3" />
 
             <RadioButton
+                android:id="@+id/question_7_radio_button_4"
                 style="@style/radio_checkbox_buttons"
                 android:text="@string/total_atp_finals_title_4" />
         </RadioGroup>
@@ -288,6 +316,7 @@
             android:text="@string/question_8_body" />
 
         <EditText
+            android:id="@+id/question_8_answer"
             style="@style/edit_text"
             android:hint="@string/answer_edit_text" />
 
@@ -300,6 +329,7 @@
             android:text="@string/question_9_body" />
 
         <EditText
+            android:id="@+id/question_9_answer"
             style="@style/edit_text"
             android:hint="@string/answer_edit_text" />
 
@@ -312,10 +342,12 @@
             android:text="@string/question_10_body" />
 
         <EditText
+            android:id="@+id/question_10_answer"
             style="@style/edit_text"
             android:hint="@string/answer_edit_text" />
 
         <Button
+            android:id="@+id/submit_button"
             style="@style/submit_button"
             android:text="@string/submit_button"/>
 
