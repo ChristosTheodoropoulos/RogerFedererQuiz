@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Title for the application. [CHAR LIMIT=20] -->
     <string name="app_name">Roger Federer Quiz</string>
 
@@ -67,4 +67,6 @@
     <string name="question_10_body">What is Roger Federer\'s nationality?</string>
 
     <string name="submit_button">Submit</string>
+
+    <string name="toast_message">Results of Quiz: <xliff:g id="result" example="7/10">%1$s</xliff:g></string>
 </resources>

@@ -349,7 +349,8 @@
         <Button
             android:id="@+id/submit_button"
             style="@style/submit_button"
-            android:text="@string/submit_button"/>
+            android:text="@string/submit_button"
+            android:onClick="submitQuiz"/>
 
     </LinearLayout>
 
