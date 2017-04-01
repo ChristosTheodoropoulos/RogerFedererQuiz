@@ -68,5 +68,8 @@
 
     <string name="submit_button">Submit</string>
 
-    <string name="toast_message">Results of Quiz: <xliff:g id="result" example="7/10">%1$s</xliff:g></string>
+    <string name="toast_message_1">Results of Quiz: <xliff:g id="result" example="7/10">%1$s</xliff:g></string>
+    <string name="toast_message_2">Results of Quiz: <xliff:g id="result" example="10/10">%1$s</xliff:g></string>
+    <string name="toast_message_3">Congratulations <xliff:g id="nameOfPlayer" example="Chris">%1$s</xliff:g>!</string>
+    <string name="toast_message_4">You are a big Roger fan!</string>
 </resources>

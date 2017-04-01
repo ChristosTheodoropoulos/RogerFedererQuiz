@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
      * Declare the Views.
      */
     EditText nameEditText;
+    // Take the name of the player.
+    String nameOfPlayer;
 
     // Question 1 Views
     RadioButton question1RadioButton1;
@@ -68,6 +70,45 @@ public class MainActivity extends AppCompatActivity {
     // Global variables
     int correctAnswers = 0;
 
+    boolean question1RadioButton1Checked;
+    boolean question1RadioButton2Checked;
+    boolean question1RadioButton3Checked;
+    boolean question1RadioButton4Checked;
+
+    boolean question2CheckBox1Checked;
+    boolean question2CheckBox2Checked;
+    boolean question2CheckBox3Checked;
+    boolean question2CheckBox4Checked;
+
+    boolean question3RadioButton1Checked;
+    boolean question3RadioButton2Checked;
+    boolean question3RadioButton3Checked;
+    boolean question3RadioButton4Checked;
+
+    boolean question4RadioButton1Checked;
+    boolean question4RadioButton2Checked;
+    boolean question4RadioButton3Checked;
+    boolean question4RadioButton4Checked;
+
+    boolean question5CheckBox1Checked;
+    boolean question5CheckBox2Checked;
+    boolean question5CheckBox3Checked;
+    boolean question5CheckBox4Checked;
+
+    boolean question6RadioButton1Checked;
+    boolean question6RadioButton2Checked;
+    boolean question6RadioButton3Checked;
+    boolean question6RadioButton4Checked;
+
+    boolean question7RadioButton1Checked;
+    boolean question7RadioButton2Checked;
+    boolean question7RadioButton3Checked;
+    boolean question7RadioButton4Checked;
+
+    String answerQuestion8;
+    String answerQuestion9;
+    String answerQuestion10;
+
     /**
      * Initialize Toast Message.
      */
@@ -81,23 +122,52 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onSaveInstanceState(Bundle savedInstanceState) {
-        // Save custom values into the bundle
-        /*savedInstanceState.putString("scoreOfPlayerA", scoreOfPlayerA);
-        savedInstanceState.putString("scoreOfPlayerB", scoreOfPlayerB);
+        // Save custom values into the bundle.
+        savedInstanceState.putString("name", nameOfPlayer);
 
-        savedInstanceState.putInt("tieBreakScorePlayerA", tieBreakScorePlayerA);
-        savedInstanceState.putInt("tieBreakScorePlayerB", tieBreakScorePlayerB);
+        savedInstanceState.putBoolean("isQuestion1RadioButton1Checked", question1RadioButton1Checked);
+        savedInstanceState.putBoolean("isQuestion1RadioButton2Checked", question1RadioButton2Checked);
+        savedInstanceState.putBoolean("isQuestion1RadioButton3Checked", question1RadioButton3Checked);
+        savedInstanceState.putBoolean("isQuestion1RadioButton4Checked", question1RadioButton4Checked);
 
-        savedInstanceState.putInt("gamesPlayerA", gamesPlayerA);
-        savedInstanceState.putInt("gamesPlayerB", gamesPlayerB);
+        savedInstanceState.putBoolean("isQuestion2CheckBox1Checked", question2CheckBox1Checked);
+        savedInstanceState.putBoolean("isQuestion2CheckBox2Checked", question2CheckBox2Checked);
+        savedInstanceState.putBoolean("isQuestion2CheckBox3Checked", question2CheckBox3Checked);
+        savedInstanceState.putBoolean("isQuestion2CheckBox4Checked", question2CheckBox4Checked);
 
-        savedInstanceState.putInt("setsPlayerA", setsPlayerA);
-        savedInstanceState.putInt("setsPlayerB", setsPlayerB);
+        savedInstanceState.putBoolean("isQuestion3RadioButton1Checked", question3RadioButton1Checked);
+        savedInstanceState.putBoolean("isQuestion3RadioButton2Checked", question3RadioButton2Checked);
+        savedInstanceState.putBoolean("isQuestion3RadioButton3Checked", question3RadioButton3Checked);
+        savedInstanceState.putBoolean("isQuestion3RadioButton4Checked", question3RadioButton4Checked);
 
-        savedInstanceState.putBoolean("tieBreak", tieBreak);
-        savedInstanceState.putBoolean("gameCompleted", gameCompleted);
-        // Always call the superclass so it can save the view hierarchy state
-        super.onSaveInstanceState(savedInstanceState);*/
+        savedInstanceState.putBoolean("isQuestion4RadioButton1Checked", question4RadioButton1Checked);
+        savedInstanceState.putBoolean("isQuestion4RadioButton2Checked", question4RadioButton2Checked);
+        savedInstanceState.putBoolean("isQuestion4RadioButton3Checked", question4RadioButton3Checked);
+        savedInstanceState.putBoolean("isQuestion4RadioButton4Checked", question4RadioButton4Checked);
+
+        savedInstanceState.putBoolean("isQuestion5CheckBox1Checked", question5CheckBox1Checked);
+        savedInstanceState.putBoolean("isQuestion5CheckBox2Checked", question5CheckBox2Checked);
+        savedInstanceState.putBoolean("isQuestion5CheckBox3Checked", question5CheckBox3Checked);
+        savedInstanceState.putBoolean("isQuestion5CheckBox4Checked", question5CheckBox4Checked);
+
+        savedInstanceState.putBoolean("isQuestion6RadioButton1Checked", question6RadioButton1Checked);
+        savedInstanceState.putBoolean("isQuestion6RadioButton2Checked", question6RadioButton2Checked);
+        savedInstanceState.putBoolean("isQuestion6RadioButton3Checked", question6RadioButton3Checked);
+        savedInstanceState.putBoolean("isQuestion6RadioButton4Checked", question6RadioButton4Checked);
+
+        savedInstanceState.putBoolean("isQuestion7RadioButton1Checked", question7RadioButton1Checked);
+        savedInstanceState.putBoolean("isQuestion7RadioButton2Checked", question7RadioButton2Checked);
+        savedInstanceState.putBoolean("isQuestion7RadioButton3Checked", question7RadioButton3Checked);
+        savedInstanceState.putBoolean("isQuestion7RadioButton4Checked", question7RadioButton4Checked);
+
+        savedInstanceState.putString("answerQuestion8", answerQuestion8);
+        savedInstanceState.putString("answerQuestion9", answerQuestion9);
+        savedInstanceState.putString("answerQuestion10", answerQuestion10);
+
+        savedInstanceState.putInt("correctAnswers", correctAnswers);
+
+        // Always call the superclass so it can save the view hierarchy state.
+        super.onSaveInstanceState(savedInstanceState);
     }
 
     @Override
@@ -149,88 +219,129 @@ public class MainActivity extends AppCompatActivity {
         questionAnswer9 = (EditText) findViewById(R.id.question_9_answer);
         questionAnswer10 = (EditText) findViewById(R.id.question_10_answer);
 
-        /*if (savedInstanceState != null) {
-            scoreOfPlayerA = savedInstanceState.getString("scoreOfPlayerA");
-            scoreOfPlayerB = savedInstanceState.getString("scoreOfPlayerB");
+        if (savedInstanceState != null) {
+            nameOfPlayer = savedInstanceState.getString("name");
 
-            tieBreakScorePlayerA = savedInstanceState.getInt("tieBreakScorePlayerA");
-            tieBreakScorePlayerB = savedInstanceState.getInt("tieBreakScorePlayerB");
+            question1RadioButton1Checked = savedInstanceState.getBoolean("isQuestion1RadioButton1Checked");
+            question1RadioButton2Checked = savedInstanceState.getBoolean("isQuestion1RadioButton2Checked");
+            question1RadioButton3Checked = savedInstanceState.getBoolean("isQuestion1RadioButton3Checked");
+            question1RadioButton4Checked = savedInstanceState.getBoolean("isQuestion1RadioButton4Checked");
 
-            gamesPlayerA = savedInstanceState.getInt("gamesPlayerA");
-            gamesPlayerB = savedInstanceState.getInt("gamesPlayerB");
+            question2CheckBox1Checked = savedInstanceState.getBoolean("isQuestion2CheckBox1Checked");
+            question2CheckBox2Checked = savedInstanceState.getBoolean("isQuestion2CheckBox2Checked");
+            question2CheckBox3Checked = savedInstanceState.getBoolean("isQuestion2CheckBox3Checked");
+            question2CheckBox4Checked = savedInstanceState.getBoolean("isQuestion2CheckBox4Checked");
 
-            setsPlayerA = savedInstanceState.getInt("setsPlayerA");
-            setsPlayerB = savedInstanceState.getInt("setsPlayerB");
+            question3RadioButton1Checked = savedInstanceState.getBoolean("isQuestion3RadioButton1Checked");
+            question3RadioButton2Checked = savedInstanceState.getBoolean("isQuestion3RadioButton2Checked");
+            question3RadioButton3Checked = savedInstanceState.getBoolean("isQuestion3RadioButton3Checked");
+            question3RadioButton4Checked = savedInstanceState.getBoolean("isQuestion3RadioButton4Checked");
 
-            tieBreak = savedInstanceState.getBoolean("tieBreak");
-            gameCompleted = savedInstanceState.getBoolean("gameCompleted");
+            question4RadioButton1Checked = savedInstanceState.getBoolean("isQuestion4RadioButton1Checked");
+            question4RadioButton2Checked = savedInstanceState.getBoolean("isQuestion4RadioButton2Checked");
+            question4RadioButton3Checked = savedInstanceState.getBoolean("isQuestion4RadioButton3Checked");
+            question4RadioButton4Checked = savedInstanceState.getBoolean("isQuestion4RadioButton4Checked");
 
-            if (tieBreak == false){
-                scoreViewPlayerA.setText(scoreOfPlayerA);
-                scoreViewPlayerB.setText(scoreOfPlayerB);
-            }
-            else {
-                scoreViewPlayerA.setText(String.valueOf(tieBreakScorePlayerA));
-                scoreViewPlayerB.setText(String.valueOf(tieBreakScorePlayerB));
-            }
-            gamesViewPlayerA.setText(String.valueOf(gamesPlayerA));
-            gamesViewPlayerB.setText(String.valueOf(gamesPlayerB));
+            question5CheckBox1Checked = savedInstanceState.getBoolean("isQuestion5CheckBox1Checked");
+            question5CheckBox2Checked = savedInstanceState.getBoolean("isQuestion5CheckBox2Checked");
+            question5CheckBox3Checked = savedInstanceState.getBoolean("isQuestion5CheckBox3Checked");
+            question5CheckBox4Checked = savedInstanceState.getBoolean("isQuestion5CheckBox4Checked");
 
-            setsViewPlayerA.setText(String.valueOf(setsPlayerA));
-            setsViewPlayerB.setText(String.valueOf(setsPlayerB));
-        }*/
+            question6RadioButton1Checked = savedInstanceState.getBoolean("isQuestion6RadioButton1Checked");
+            question6RadioButton2Checked = savedInstanceState.getBoolean("isQuestion6RadioButton2Checked");
+            question6RadioButton3Checked = savedInstanceState.getBoolean("isQuestion6RadioButton3Checked");
+            question6RadioButton4Checked = savedInstanceState.getBoolean("isQuestion6RadioButton4Checked");
+
+            question7RadioButton1Checked = savedInstanceState.getBoolean("isQuestion7RadioButton1Checked");
+            question7RadioButton2Checked = savedInstanceState.getBoolean("isQuestion7RadioButton2Checked");
+            question7RadioButton3Checked = savedInstanceState.getBoolean("isQuestion7RadioButton3Checked");
+            question7RadioButton4Checked = savedInstanceState.getBoolean("isQuestion7RadioButton4Checked");
+
+            answerQuestion8 = savedInstanceState.getString("answerQuestion8");
+            answerQuestion9 = savedInstanceState.getString("answerQuestion9");
+            answerQuestion10 = savedInstanceState.getString("answerQuestion10");
+
+            correctAnswers = savedInstanceState.getInt("correctAnswers");
+        }
     }
 
     /**
      * This method is called when the submit button is clicked.
+     * @correctAnswers: global variable
      */
     public void submitQuiz(View view) {
+        nameOfPlayer = nameEditText.getText().toString();
+        String finalResults = calculateQuizResult();
+
+        // Create toast message to display.
+        String toastMessage;
+        if (correctAnswers == 10){
+            toastMessage = getString(R.string.toast_message_2, finalResults);
+            if (nameOfPlayer.length() != 0) {
+                toastMessage += "\n" + getString(R.string.toast_message_3, nameOfPlayer);
+            }
+            toastMessage += "\n" + getString(R.string.toast_message_4);
+        }
+        else {
+            toastMessage = getString(R.string.toast_message_1, finalResults);
+        }
+        finalResultMessage.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_LONG).show();
+
+        // Reset number of correct answers.
+        correctAnswers = 0;
+    }
+
+    /**
+     * This method finds the correct answer and returns the final quiz results.
+     * @correctAnswers: global variable
+     */
+    public String calculateQuizResult(){
         // Take the answer of question 1. Check which radio button is checked.
-        boolean question1RadioButton1Checked = question1RadioButton1.isChecked();
-        boolean question1RadioButton2Checked = question1RadioButton2.isChecked();
-        boolean question1RadioButton3Checked = question1RadioButton3.isChecked();
-        boolean question1RadioButton4Checked = question1RadioButton4.isChecked();
+        question1RadioButton1Checked = question1RadioButton1.isChecked();
+        question1RadioButton2Checked = question1RadioButton2.isChecked();
+        question1RadioButton3Checked = question1RadioButton3.isChecked();
+        question1RadioButton4Checked = question1RadioButton4.isChecked();
 
         // Take the answer of question 2. Check if any check box is checked.
-        boolean question2CheckBox1Checked = question2CheckBox1.isChecked();
-        boolean question2CheckBox2Checked = question2CheckBox2.isChecked();
-        boolean question2CheckBox3Checked = question2CheckBox3.isChecked();
-        boolean question2CheckBox4Checked = question2CheckBox4.isChecked();
+        question2CheckBox1Checked = question2CheckBox1.isChecked();
+        question2CheckBox2Checked = question2CheckBox2.isChecked();
+        question2CheckBox3Checked = question2CheckBox3.isChecked();
+        question2CheckBox4Checked = question2CheckBox4.isChecked();
 
         // Take the answer of question 3. Check which radio button is checked.
-        boolean question3RadioButton1Checked = question3RadioButton1.isChecked();
-        boolean question3RadioButton2Checked = question3RadioButton2.isChecked();
-        boolean question3RadioButton3Checked = question3RadioButton3.isChecked();
-        boolean question3RadioButton4Checked = question3RadioButton4.isChecked();
+        question3RadioButton1Checked = question3RadioButton1.isChecked();
+        question3RadioButton2Checked = question3RadioButton2.isChecked();
+        question3RadioButton3Checked = question3RadioButton3.isChecked();
+        question3RadioButton4Checked = question3RadioButton4.isChecked();
 
         // Take the answer of question 4. Check which radio button is checked.
-        boolean question4RadioButton1Checked = question4RadioButton1.isChecked();
-        boolean question4RadioButton2Checked = question4RadioButton2.isChecked();
-        boolean question4RadioButton3Checked = question4RadioButton3.isChecked();
-        boolean question4RadioButton4Checked = question4RadioButton4.isChecked();
+        question4RadioButton1Checked = question4RadioButton1.isChecked();
+        question4RadioButton2Checked = question4RadioButton2.isChecked();
+        question4RadioButton3Checked = question4RadioButton3.isChecked();
+        question4RadioButton4Checked = question4RadioButton4.isChecked();
 
         // Take the answer of question 5. Check if any check box is checked.
-        boolean question5CheckBox1Checked = question5CheckBox1.isChecked();
-        boolean question5CheckBox2Checked = question5CheckBox2.isChecked();
-        boolean question5CheckBox3Checked = question5CheckBox3.isChecked();
-        boolean question5CheckBox4Checked = question5CheckBox4.isChecked();
+        question5CheckBox1Checked = question5CheckBox1.isChecked();
+        question5CheckBox2Checked = question5CheckBox2.isChecked();
+        question5CheckBox3Checked = question5CheckBox3.isChecked();
+        question5CheckBox4Checked = question5CheckBox4.isChecked();
 
         // Take the answer of question 6. Check which radio button is checked.
-        boolean question6RadioButton1Checked = question6RadioButton1.isChecked();
-        boolean question6RadioButton2Checked = question6RadioButton2.isChecked();
-        boolean question6RadioButton3Checked = question6RadioButton3.isChecked();
-        boolean question6RadioButton4Checked = question6RadioButton4.isChecked();
+        question6RadioButton1Checked = question6RadioButton1.isChecked();
+        question6RadioButton2Checked = question6RadioButton2.isChecked();
+        question6RadioButton3Checked = question6RadioButton3.isChecked();
+        question6RadioButton4Checked = question6RadioButton4.isChecked();
 
         // Take the answer of question 7. Check which radio button is checked.
-        boolean question7RadioButton1Checked = question7RadioButton1.isChecked();
-        boolean question7RadioButton2Checked = question7RadioButton2.isChecked();
-        boolean question7RadioButton3Checked = question7RadioButton3.isChecked();
-        boolean question7RadioButton4Checked = question7RadioButton4.isChecked();
+        question7RadioButton1Checked = question7RadioButton1.isChecked();
+        question7RadioButton2Checked = question7RadioButton2.isChecked();
+        question7RadioButton3Checked = question7RadioButton3.isChecked();
+        question7RadioButton4Checked = question7RadioButton4.isChecked();
 
         // Find the user's name.
-        String answerQuestion8 = questionAnswer8.getText().toString();
-        String answerQuestion9 = questionAnswer9.getText().toString();
-        String answerQuestion10 = questionAnswer10.getText().toString();
+        answerQuestion8 = questionAnswer8.getText().toString();
+        answerQuestion9 = questionAnswer9.getText().toString();
+        answerQuestion10 = questionAnswer10.getText().toString();
 
         // Check Question 1 if it's correct.
         if (question1RadioButton1Checked == false && question1RadioButton2Checked == false
@@ -289,9 +400,6 @@ public class MainActivity extends AppCompatActivity {
             correctAnswers += 1;
         }
 
-        String finalResults = correctAnswers + "/10";
-        String toastMessage = getString(R.string.toast_message, finalResults);
-        finalResultMessage.makeText(getApplicationContext(), toastMessage, Toast.LENGTH_LONG).show();
-        correctAnswers = 0;
+        return(correctAnswers + "/10");
     }
 }
