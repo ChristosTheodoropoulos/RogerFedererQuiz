@@ -37,6 +37,7 @@
             android:text="@string/question_1_body" />
 
         <RadioGroup
+            android:id="@+id/question_1_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -123,6 +124,7 @@
             android:text="@string/question_3_body" />
 
         <RadioGroup
+            android:id="@+id/question_3_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -159,6 +161,7 @@
             android:text="@string/question_4_body" />
 
         <RadioGroup
+            android:id="@+id/question_4_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -245,6 +248,7 @@
             android:text="@string/question_6_body" />
 
         <RadioGroup
+            android:id="@+id/question_6_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -281,6 +285,7 @@
             android:text="@string/question_7_body" />
 
         <RadioGroup
+            android:id="@+id/question_7_radio_group"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
