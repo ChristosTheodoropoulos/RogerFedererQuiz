@@ -344,8 +344,7 @@ public class MainActivity extends AppCompatActivity {
         answerQuestion10 = questionAnswer10.getText().toString();
 
         // Check Question 1 if it's correct.
-        if (question1RadioButton1Checked == false && question1RadioButton2Checked == false
-                && question1RadioButton3Checked == true && question1RadioButton4Checked == false){
+        if (question1RadioButton3Checked == true){
             correctAnswers += 1;
         }
 
@@ -356,14 +355,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Check Question 3 if it's correct.
-        if (question3RadioButton1Checked == false && question3RadioButton2Checked == false
-                && question3RadioButton3Checked == true && question3RadioButton4Checked == false){
+        if (question3RadioButton3Checked == true){
             correctAnswers += 1;
         }
 
         // Check Question 4 if it's correct.
-        if (question4RadioButton1Checked == false && question4RadioButton2Checked == false
-                && question4RadioButton3Checked == false && question4RadioButton4Checked == true){
+        if (question4RadioButton4Checked == true){
             correctAnswers += 1;
         }
 
@@ -374,14 +371,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Check Question 6 if it's correct.
-        if (question6RadioButton1Checked == true && question6RadioButton2Checked == false
-                && question6RadioButton3Checked == false && question6RadioButton4Checked == false){
+        if (question6RadioButton1Checked == true){
             correctAnswers += 1;
         }
 
         // Check Question 7 if it's correct.
-        if (question7RadioButton1Checked == false && question7RadioButton2Checked == false
-                && question7RadioButton3Checked == false && question7RadioButton4Checked == true){
+        if (question7RadioButton4Checked == true){
             correctAnswers += 1;
         }
 
